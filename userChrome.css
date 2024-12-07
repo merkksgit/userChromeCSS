@@ -1,0 +1,6 @@
+:root {
+  --chrome-content-separator-color: var(
+    --lwt-accent-color,
+    var(--toolbox-non-lwt-bgcolor)
+  ) !important;
+}
