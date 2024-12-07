@@ -45,12 +45,16 @@
 
 /* Tab next color */
 .tab-text.tab-label {
-  color: #9d7cd8 !important;
+  color: #737aa2 !important;
 }
 
 /* Tab-close-button color */
 .tab-close-button.close-icon {
-  color: #a9b1d6;
+  color: #737aa2 !important;
+}
+
+#tabs-newtab-button {
+  color: #737aa2 !important;
 }
 
 /* Round minimise, maximise and close buttons */
@@ -60,16 +64,16 @@
 
 .titlebar-button {
   opacity: 0.6;
-  --uc-caption-color: #ff9e64;
+  --uc-caption-color: #ff9e64 !important;
 }
 
 .titlebar-min {
   opacity: 0.6;
-  --uc-caption-color: #c3e88d;
+  --uc-caption-color: #c3e88d !important;
 }
 .titlebar-close {
   opacity: 0.6;
-  --uc-caption-color: #ff007c;
+  --uc-caption-color: #ff007c !important;
 }
 
 .titlebar-button:hover {
