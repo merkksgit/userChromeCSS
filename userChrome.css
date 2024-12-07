@@ -1,5 +1,4 @@
 /* Hide separator */
-
 :root {
   --chrome-content-separator-color: var(
     --lwt-accent-color,
@@ -8,7 +7,6 @@
 }
 
 /* Hide some icons from toolbar */
-
 #tracking-protection-icon {
   display: none !important;
 }
@@ -43,4 +41,51 @@
 
 #reader-mode-button-icon {
   display: none !important;
+}
+
+/* Tab next color */
+.tab-text.tab-label {
+  color: #9d7cd8 !important;
+}
+
+/* Tab-close-button color */
+.tab-close-button.close-icon {
+  color: #a9b1d6;
+}
+
+/* Round minimise, maximise and close buttons */
+.titlebar-button {
+  --uc-caption-background: var(--uc-caption-color);
+}
+
+.titlebar-button {
+  opacity: 0.6;
+  --uc-caption-color: #ff9e64;
+}
+.titlebar-min {
+  opacity: 0.6;
+  --uc-caption-color: #c3e88d;
+}
+.titlebar-close {
+  opacity: 0.6;
+  --uc-caption-color: #ff007c;
+}
+
+.titlebar-button:hover {
+  opacity: 1;
+}
+
+.titlebar-button {
+  background: transparent !important;
+  padding-inline: 10px !important;
+  transition: opacity 0.2s ease;
+}
+.titlebar-close {
+  padding-right: 18px !important;
+}
+
+.titlebar-button > .toolbarbutton-icon {
+  list-style-image: none;
+  border-radius: 10px;
+  background: var(--uc-caption-background, currentColor) !important;
 }
