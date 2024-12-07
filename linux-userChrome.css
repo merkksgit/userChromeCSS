@@ -1,1 +1,113 @@
-skldjflksjfd
+/* Hide separator */
+:root {
+  --chrome-content-separator-color: var(
+    --lwt-accent-color,
+    var(--toolbox-non-lwt-bgcolor)
+  ) !important;
+}
+
+/* Hide some icons from toolbar */
+#tracking-protection-icon {
+  display: none !important;
+}
+
+#identity-icon {
+  display: none !important;
+}
+
+#permissions-granted-icon {
+  display: none !important;
+}
+
+.blocked-permission-icon.autoplay-media-icon {
+  display: none !important;
+}
+
+#picture-in-picture-button-icon {
+  display: none !important;
+}
+
+#translations-button-icon {
+  display: none !important;
+}
+
+#star-button {
+  display: none !important;
+}
+
+#unified-extensions-button {
+  display: none !important;
+}
+
+#reader-mode-button-icon {
+  display: none !important;
+}
+
+/* Tab next color */
+.tab-text.tab-label {
+  color: #737aa2 !important;
+}
+
+/* Tab-close-button color */
+.tab-close-button.close-icon {
+  color: #737aa2 !important;
+}
+
+#tabs-newtab-button {
+  color: #737aa2 !important;
+}
+
+/* Round minimise, maximise and close buttons */
+.titlebar-button {
+  --uc-caption-background: var(--uc-caption-color);
+}
+
+.titlebar-button {
+  opacity: 1;
+  --uc-caption-color: #c3e88d !important;
+}
+
+.titlebar-min {
+  opacity: 1;
+  --uc-caption-color: #ff9e64 !important;
+}
+.titlebar-close {
+  opacity: 1;
+  --uc-caption-color: #ff007c !important;
+}
+
+.titlebar-button:hover {
+  opacity: 0.6;
+}
+
+.titlebar-button {
+  background: transparent !important;
+  padding-inline: 10px !important;
+  transition: opacity 0.2s ease;
+}
+
+.titlebar-close {
+  padding-right: 18px !important;
+}
+
+.titlebar-button > .toolbarbutton-icon {
+  list-style-image: none;
+  background: var(--uc-caption-background, currentColor) !important;
+  width: 16px !important; /* Add this to set specific width */
+  height: 16px !important; /* Add this to set specific height */
+  border-radius: 16px; /* Adjust this to match the width/height */
+}
+
+/* Set specific margins for individual buttons if needed */
+.titlebar-min {
+  margin-inline: -10px !important;
+}
+
+.titlebar-max {
+  margin-inline: -10px !important;
+}
+
+.titlebar-close {
+  margin-inline-start: -10px !important; /* Space from the left */
+  margin-inline-end: -5px !important; /* Space from the right edge */
+}
