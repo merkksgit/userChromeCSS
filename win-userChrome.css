@@ -196,3 +196,15 @@ panelview {
 :is(menupopup, panel):where([type="arrow"]) {
   --panel-border-color: #545c7e !important;
 }
+
+:is(menupopup, panel):where([type="arrow"]) {
+  --panel-border-color: #545c7e !important;
+}
+
+#urlbar[breakout][breakout-extend] > #urlbar-background {
+  border-color: #545c7e !important;
+}
+
+#urlbar-results .urlbarView-row[selected] {
+  background-color: #3b4261 !important;
+}
