@@ -62,6 +62,7 @@
   opacity: 0.6;
   --uc-caption-color: #ff9e64;
 }
+
 .titlebar-min {
   opacity: 0.6;
   --uc-caption-color: #c3e88d;
@@ -80,6 +81,7 @@
   padding-inline: 10px !important;
   transition: opacity 0.2s ease;
 }
+
 .titlebar-close {
   padding-right: 18px !important;
 }
@@ -88,4 +90,21 @@
   list-style-image: none;
   border-radius: 10px;
   background: var(--uc-caption-background, currentColor) !important;
+  width: 17px !important; /* Add this to set specific width */
+  height: 17px !important; /* Add this to set specific height */
+  border-radius: 17px; /* Adjust this to match the width/height */
+}
+
+/* Set specific margins for individual buttons if needed */
+.titlebar-min {
+  margin-inline: -2px !important;
+}
+
+.titlebar-max {
+  margin-inline: -2px !important;
+}
+
+.titlebar-close {
+  margin-inline-start: -2px !important; /* Space from the left */
+  margin-inline-end: 4px !important; /* Space from the right edge */
 }
