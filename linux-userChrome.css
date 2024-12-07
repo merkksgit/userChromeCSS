@@ -116,3 +116,80 @@
   margin-inline-start: -10px !important; /* Space from the left */
   margin-inline-end: -5px !important; /* Space from the right edge */
 }
+
+/* Right-click menu */
+menupopup {
+  --menu-background-color: #24283b !important; /* Replace with your desired color */
+  --panel-background: #24283b !important;
+  background-color: #24283b !important;
+  border-radius: 6px;
+}
+
+/* For menu items when hovered */
+menuitem:hover,
+menu:hover {
+  background-color: #2f3549 !important; /* Replace with your desired hover color */
+}
+
+/* For menu item text color */
+menuitem,
+menu {
+  color: #a9b1d6 !important; /* Replace with your desired text color */
+}
+
+/* For disabled menu items */
+menuitem[disabled="true"] {
+  color: #565f89 !important; /* Replace with your desired disabled text color */
+}
+
+/* Main menu panel background */
+#appMenu-popup {
+  background-color: #24283b !important;
+  border-radius: 6px;
+}
+
+/* Menu items */
+.subviewbutton {
+  color: #a9b1d6 !important;
+  background-color: transparent !important;
+}
+
+/* Hover state for menu items */
+.subviewbutton:hover {
+  background-color: #2f3549 !important;
+}
+
+/* Separator lines */
+toolbarseparator {
+  border-bottom: 1px solid #565f89 !important;
+}
+
+/* Icons in the menu */
+.subviewbutton .toolbarbutton-icon {
+  fill: #a9b1d6 !important; /* Changes icon color */
+}
+
+/* More options section */
+#appMenu-more-button {
+  color: #a9b1d6 !important;
+}
+
+/* Zoom controls section */
+#appMenu-zoom-controls {
+  background-color: transparent !important;
+}
+
+/* Disabled items */
+.subviewbutton[disabled="true"] {
+  color: #565f89 !important;
+  opacity: 0.5 !important;
+}
+
+/* Inner content container */
+panelview {
+  background-color: #24283b !important;
+}
+
+:is(menupopup, panel):where([type="arrow"]) {
+  --panel-border-color: #545c7e !important;
+}
