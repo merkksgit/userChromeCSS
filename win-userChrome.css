@@ -118,7 +118,7 @@
 
 .titlebar-close {
   margin-inline-start: -5px !important; /* Space from the left */
-  margin-inline-end: 0px !important; /* Space from the right edge */
+  margin-inline-end: -6px !important; /* Space from the right edge */
 }
 
 /* Right-click menu */
