@@ -40,3 +40,7 @@
 #unified-extensions-button {
   display: none !important;
 }
+
+#reader-mode-button-icon {
+  display: none !important;
+}
