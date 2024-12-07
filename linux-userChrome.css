@@ -62,6 +62,10 @@
   color: #737aa2 !important;
 }
 
+#alltabs-button {
+  color: #5f6588;
+}
+
 /* Round minimise, maximise and close buttons */
 .titlebar-button {
   --uc-caption-background: var(--uc-caption-color);
