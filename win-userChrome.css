@@ -43,9 +43,14 @@
   display: none !important;
 }
 
-/* Tab next color */
-.tab-text.tab-label {
-  color: #737aa2 !important;
+/* Current tab color */
+.tabbrowser-tab[selected="true"] .tab-label {
+  color: #9d7cd8 !important;
+}
+
+/* Non-selected tab color */
+.tabbrowser-tab:not([selected="true"]) .tab-label {
+  color: #737aa2 !important; /* Different color for inactive tabs */
 }
 
 /* Tab-close-button color */
@@ -109,5 +114,5 @@
 
 .titlebar-close {
   margin-inline-start: -5px !important; /* Space from the left */
-  margin-inline-end: 5px !important; /* Space from the right edge */
+  margin-inline-end: 0px !important; /* Space from the right edge */
 }
