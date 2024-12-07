@@ -1,6 +1,42 @@
+/* Hide separator */
+
 :root {
   --chrome-content-separator-color: var(
     --lwt-accent-color,
     var(--toolbox-non-lwt-bgcolor)
   ) !important;
+}
+
+/* Hide some icons from toolbar */
+
+#tracking-protection-icon {
+  display: none !important;
+}
+
+#identity-icon {
+  display: none !important;
+}
+
+#permissions-granted-icon {
+  display: none !important;
+}
+
+.blocked-permission-icon.autoplay-media-icon {
+  display: none !important;
+}
+
+#picture-in-picture-button-icon {
+  display: none !important;
+}
+
+#translations-button-icon {
+  display: none !important;
+}
+
+#star-button {
+  display: none !important;
+}
+
+#unified-extensions-button {
+  display: none !important;
 }
