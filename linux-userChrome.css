@@ -74,11 +74,11 @@
 
 .titlebar-min {
   opacity: 1;
-  --uc-caption-color: #ff9e64 !important;
+  --uc-caption-color: #ffc777 !important;
 }
 .titlebar-close {
   opacity: 1;
-  --uc-caption-color: #ff007c !important;
+  --uc-caption-color: #ff757f !important;
 }
 
 .titlebar-button:hover {
