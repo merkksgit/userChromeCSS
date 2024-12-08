@@ -50,7 +50,7 @@
 
 /* Non-selected tab color */
 .tabbrowser-tab:not([selected="true"]) .tab-label {
-  color: #737aa2 !important; /* Different color for inactive tabs */
+  color: #737aa2 !important;
 }
 
 /* Tab-close-button color */
@@ -123,7 +123,7 @@
 
 /* Right-click menu */
 menupopup {
-  --menu-background-color: #24283b !important; /* Replace with your desired color */
+  --menu-background-color: #24283b !important;
   --panel-background: #24283b !important;
   --panel-border-color: #545c7e !important;
   --panel-separator-color: #545c7e !important;
@@ -134,19 +134,19 @@ menupopup {
 /* For menu items when hovered */
 menuitem:hover,
 menu:hover {
-  background-color: #2f3549 !important; /* Replace with your desired hover color */
+  background-color: #2f3549 !important;
 }
 
 /* For menu item text color */
 menuitem,
 menu {
-  color: #a9b1d6 !important; /* Replace with your desired text color */
+  color: #a9b1d6 !important;
   border: none;
 }
 
 /* For disabled menu items */
 menuitem[disabled="true"] {
-  color: #565f89 !important; /* Replace with your desired disabled text color */
+  color: #565f89 !important;
 }
 
 /* Main menu panel background */
