@@ -1,6 +1,6 @@
 # userChrome.css
 
-My minimalistic Firefox userChrome.css. The configurations in linux-userChrome.css and win-userChrome.css are nearly identical and can be used on both Windows and Linux systems. Only minimal modifications were necessary to adapt them for different machines.
+My minimalistic Firefox userChrome.css. The configurations in **linux-userChrome.css** and **win-userChrome.css** are nearly identical and can be used on both Windows and Linux systems. Only minimal modifications were necessary to adapt them for different machines.
 
 ## Preview
 
