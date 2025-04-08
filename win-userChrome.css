@@ -6,6 +6,15 @@
   ) !important;
 }
 
+/* Bookmarks and tabs text-shadow */
+.tabbrowser-tab {
+  text-shadow: none !important;
+}
+
+.bookmark-item {
+  text-shadow: none !important;
+}
+
 /* Hide some icons from toolbar */
 #tracking-protection-icon {
   display: none !important;
