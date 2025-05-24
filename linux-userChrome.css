@@ -14,6 +14,18 @@
   text-shadow: none !important;
 }
 
+#searchmode-switcher-icon {
+  display: none !important;
+}
+
+#urlbar-searchmode-switcher {
+  background-color: #24283b !important;
+}
+
+#searchmode-switcher-chicklet {
+  background-color: #24283b !important;
+}
+
 /* Hide some icons from toolbar */
 
 #tracking-protection-icon {
@@ -32,7 +44,7 @@
 
 .blocked-permission-icon.autoplay-media-icon {
   /*display: none !important;*/
-  color:  #565f89 !important;
+  color: #565f89 !important;
 }
 
 #picture-in-picture-button-icon {
@@ -53,14 +65,14 @@
 
 #reader-mode-button-icon {
   /*display: none !important;*/
-  color:  #565f89 !important;
+  color: #565f89 !important;
 }
 
 /* Current tab color */
 .tabbrowser-tab[selected="true"] .tab-label {
   /*color: #bb9af7 !important;*/
-    color: #c0caf5 !important;
-    font-weight: bold;
+  color: #c0caf5 !important;
+  font-weight: bold;
 }
 
 /* Non-selected tab color */
