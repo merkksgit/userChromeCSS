@@ -130,6 +130,30 @@
   margin-inline-end: -6px !important; /* Space from the right edge */
 }
 
+/* Title bar buttons #2 */
+/* .titlebar-buttonbox > .titlebar-button { */
+/*   background-color: transparent !important; */
+/*   border-radius: 4px; */
+/*   transition: background-color 0.2s ease; */
+/* } */
+/**/
+/* .titlebar-button:hover { */
+/*   background: none !important; */
+/* } */
+/**/
+/* .titlebar-close:hover { */
+/*   background-color: #ff007c !important; */
+/* } */
+/**/
+/* .titlebar-min:hover { */
+/*   background-color: #3b4261 !important; */
+/* } */
+/**/
+/* .titlebar-max:hover, */
+/* .titlebar-restore:hover { */
+/*   background-color: #3b4261 !important; */
+/* } */
+
 /* Right-click menu */
 menupopup {
   --menu-background-color: #24283b !important;
