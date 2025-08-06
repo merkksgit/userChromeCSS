@@ -1,0 +1,261 @@
+/* Hide separator */
+:root {
+  --chrome-content-separator-color: var(
+    --lwt-accent-color,
+    var(--toolbox-non-lwt-bgcolor)
+  ) !important;
+}
+
+/*Hide new tab firefox icon*/
+.tabbrowser-tab[label="New Tab"] .tab-icon-image {
+  display: none !important;
+}
+
+.tabbrowser-tab {
+  text-shadow: none !important;
+}
+
+.bookmark-item {
+  text-shadow: none !important;
+}
+
+#searchmode-switcher-icon {
+  display: none !important;
+}
+
+#urlbar-searchmode-switcher {
+  background-color: #24283b !important;
+}
+
+#searchmode-switcher-chicklet {
+  background-color: #24283b !important;
+}
+
+/* Hide some icons from toolbar */
+/*
+#soundfixer_unrelenting_technology-BAP {
+  display: none !important;
+}
+*/
+#tracking-protection-icon {
+  /*display: none !important;*/
+  color: #565f89 !important;
+}
+
+#identity-icon {
+  /*display: none !important;*/
+  color: #565f89 !important;
+}
+
+#permissions-granted-icon {
+  /*display: none !important;*/
+  color: #565f89 !important;
+}
+
+.blocked-permission-icon.autoplay-media-icon {
+  /*display: none !important;*/
+  color: #565f89 !important;
+}
+
+#picture-in-picture-button-icon {
+  display: none !important;
+}
+
+#translations-button-icon {
+  display: none !important;
+}
+
+#star-button {
+  display: none !important;
+}
+
+#unified-extensions-button {
+  display: none !important;
+}
+
+#reader-mode-button-icon {
+  /*display: none !important;*/
+  color: #565f89 !important;
+}
+
+/* Current tab color */
+.tabbrowser-tab[selected="true"] .tab-label {
+  /*color: #bb9af7 !important;*/
+  color: #c0caf5 !important;
+  font-weight: bold;
+}
+
+/* Non-selected tab color */
+.tabbrowser-tab:not([selected="true"]) .tab-label {
+  color: #737aa2 !important; /* Different color for inactive tabs */
+}
+
+/* Tab-close-button color */
+.tab-close-button.close-icon {
+  color: #737aa2 !important;
+}
+
+#tabs-newtab-button {
+  color: #737aa2 !important;
+}
+
+#alltabs-button {
+  color: #5f6588;
+}
+
+/* Target window control buttons */
+/* Base button style */
+.titlebar-buttonbox > .titlebar-button {
+  background-color: transparent !important;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+/* Default hover does nothing (prevents overlap) */
+.titlebar-button:hover {
+  background: none !important;
+}
+
+/* Close button hover = pink */
+.titlebar-close:hover {
+  background-color: #ff007c !important;
+}
+
+/* Minimize hover = #3b4261 */
+.titlebar-min:hover {
+  background-color: #3b4261 !important;
+}
+
+/* Maximize/Restore hover = #3b4261 */
+.titlebar-max:hover,
+.titlebar-restore:hover {
+  background-color: #3b4261 !important;
+}
+
+/* Right-click menu */
+menupopup {
+  --menu-background-color: #24283b !important;
+  --panel-background: #24283b !important;
+  background-color: #24283b !important;
+  border-radius: 6px;
+}
+
+/* For menu items when hovered */
+menuitem:hover,
+menu:hover {
+  background-color: #2f3549 !important;
+}
+
+/* For menu item text color */
+menuitem,
+menu {
+  color: #a9b1d6 !important;
+}
+
+/* Menu items */
+.subviewbutton {
+  color: #a9b1d6 !important;
+  background-color: transparent !important;
+}
+
+/* Hover state for menu items */
+.subviewbutton:hover {
+  background-color: #2f3549 !important;
+}
+
+/* Separator lines */
+toolbarseparator {
+  border-bottom: 1px solid #565f89 !important;
+}
+
+/* Icons in the menu */
+.subviewbutton .toolbarbutton-icon {
+  fill: #a9b1d6 !important; /* Changes icon color */
+}
+
+/* More options section */
+#appMenu-more-button {
+  color: #a9b1d6 !important;
+}
+
+/* Zoom controls section */
+#appMenu-zoom-controls {
+  background-color: transparent !important;
+}
+
+/* Disabled items */
+.subviewbutton[disabled="true"] {
+  color: #565f89 !important;
+  opacity: 0.5 !important;
+}
+
+/* Inner content container */
+panelview {
+  background-color: #24283b !important;
+}
+
+:is(menupopup, panel):where([type="arrow"]) {
+  --panel-border-color: #545c7e !important;
+}
+
+:is(menupopup, panel):where([type="arrow"]) {
+  --panel-border-color: #545c7e !important;
+}
+
+#PlacesToolbar menupopup menuitem,
+#PlacesToolbar menupopup menu {
+  padding: 4px 8px !important;
+  margin: 0 !important;
+}
+
+#urlbar[breakout][breakout-extend] > #urlbar-background {
+  border-color: #545c7e !important;
+}
+
+#urlbar-results .urlbarView-row[selected] {
+  background-color: #3b4261 !important;
+}
+
+/* Target only bookmarks dropdown menus with the correct selector */
+#PlacesToolbar menupopup[placespopup="true"],
+#BMB_bookmarksPopup menupopup[placespopup="true"],
+#bookmarksMenu menupopup[placespopup="true"] {
+  --panel-border-color: transparent !important;
+  --arrowpanel-background: #24283b !important;
+  --arrowpanel-color: #a9b1d6 !important;
+  box-shadow: none !important;
+  border: 1px solid #545c7e !important;
+  border-radius: 8px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Remove the inner border/outline */
+#PlacesToolbar menupopup[placespopup="true"] .popup-internal-box,
+#BMB_bookmarksPopup menupopup[placespopup="true"] .popup-internal-box,
+#bookmarksMenu menupopup[placespopup="true"] .popup-internal-box {
+  border: none !important;
+  outline: none !important;
+}
+
+/* Fix the spacing within bookmark menu items */
+#PlacesToolbar menupopup[placespopup="true"] menuitem,
+#PlacesToolbar menupopup[placespopup="true"] menu,
+#BMB_bookmarksPopup menupopup[placespopup="true"] menuitem,
+#BMB_bookmarksPopup menupopup[placespopup="true"] menu,
+#bookmarksMenu menupopup[placespopup="true"] menuitem,
+#bookmarksMenu menupopup[placespopup="true"] menu {
+  padding: 4px 8px !important;
+  margin: 0 !important;
+  color: #a9b1d6 !important;
+}
+
+/* Hover state for bookmark items */
+#PlacesToolbar menupopup[placespopup="true"] menuitem:hover,
+#PlacesToolbar menupopup[placespopup="true"] menu:hover,
+#BMB_bookmarksPopup menupopup[placespopup="true"] menuitem:hover,
+#BMB_bookmarksPopup menupopup[placespopup="true"] menu:hover,
+#bookmarksMenu menupopup[placespopup="true"] menuitem:hover,
+#bookmarksMenu menupopup[placespopup="true"] menu:hover {
+  background-color: #2f3549 !important;
+}
