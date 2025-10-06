@@ -6,9 +6,26 @@
   ) !important;
 }
 
+/* Remove menu separators (dividers) */
+menuseparator {
+  display: none !important;
+}
+
+/* Remove separators from the Application Menu (hamburger menu) */
+#appMenu-popup .subviewbutton-separator,
+#appMenu-popup toolbarseparator,
+#appMenu-popup menuseparator,
+#appMenu-popup hr {
+  display: none !important;
+}
+
 .searchmode-switcher-chicklet {
   background: none !important;
   padding-left: 10px !important;
+}
+
+#soundfixer_unrelenting_technology-BAP {
+  list-style-image: none !important;
 }
 
 /* not secure button backround */
@@ -37,6 +54,10 @@
   text-shadow: none !important;
 }
 
+#home-button {
+  display: none !important;
+}
+
 #searchmode-switcher-icon {
   display: none !important;
 }
@@ -50,11 +71,6 @@
 }
 
 /* Hide some icons from toolbar */
-/*
-#soundfixer_unrelenting_technology-BAP {
-  display: none !important;
-}
-*/
 #tracking-protection-icon {
   /*display: none !important;*/
   color: #565f89 !important;
@@ -80,7 +96,7 @@
 }
 
 #translations-button-icon {
-  color: #1f2335 !important;;
+  color: #1f2335 !important;
 }
 
 #star-button {
