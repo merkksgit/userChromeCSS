@@ -6,9 +6,18 @@
   ) !important;
 }
 
+.searchmode-switcher-chicklet {
+  background: none !important;
+  padding-left: 10px !important;
+}
+
 /* not secure button backround */
 #identity-icon-box {
   background: none !important;
+}
+
+#identity-icon {
+  display: none !important;
 }
 
 #identity-permission-box {
@@ -71,7 +80,7 @@
 }
 
 #translations-button-icon {
-  color: #1f2335 !important;
+  color: #1f2335 !important;;
 }
 
 #star-button {
