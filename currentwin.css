@@ -4,6 +4,11 @@
     --lwt-accent-color,
     var(--toolbox-non-lwt-bgcolor)
   ) !important;
+  /* border radius of multiple elements */
+  --tab-border-radius: var(--toolbarbutton-border-radius);
+  --toolbarbutton-border-radius: var(--button-border-radius);
+  --button-border-radius: var(--border-radius-medium);
+  --border-radius-medium: 3px !important;
 }
 
 /* Remove menu separators (dividers) */
@@ -12,12 +17,12 @@ menuseparator {
 }
 
 /* Remove separators from the Application Menu (hamburger menu) */
-#appMenu-popup .subviewbutton-separator,
+/*#appMenu-popup .subviewbutton-separator,
 #appMenu-popup toolbarseparator,
 #appMenu-popup menuseparator,
 #appMenu-popup hr {
   display: none !important;
-}
+}*/
 
 .searchmode-switcher-chicklet {
   background: none !important;
@@ -134,6 +139,7 @@ menuseparator {
 /* Non-selected tab color */
 .tabbrowser-tab:not([selected="true"]) .tab-label {
   color: #737aa2 !important; /* Different color for inactive tabs */
+  font-weight: bold;
 }
 
 /* Tab-close-button color */
@@ -210,9 +216,9 @@ menu {
 }
 
 /* Separator lines */
-toolbarseparator {
+/*toolbarseparator {
   border-bottom: 1px solid #565f89 !important;
-}
+}*/
 
 /* Icons in the menu */
 .subviewbutton .toolbarbutton-icon {
