@@ -11,6 +11,10 @@
   --border-radius-medium: 3px !important;
 }
 
+#nav-bar {
+  border-color: transparent !important;
+}
+
 /* Remove menu separators (dividers) */
 menuseparator {
   display: none !important;
@@ -126,7 +130,7 @@ menuseparator {
 }
 
 #firefox-view-button {
-  color: #1f2335 !important;
+  color: #565f89 !important;
 }
 
 /* Current tab color */
