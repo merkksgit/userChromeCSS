@@ -72,11 +72,11 @@ menuseparator {
 }
 
 #urlbar-searchmode-switcher {
-  background-color: #24283b !important;
+  background-color: #161c2b !important;
 }
 
 #searchmode-switcher-chicklet {
-  background-color: #24283b !important;
+  background-color: #161c2b !important;
 }
 
 /* Hide some icons from toolbar */
@@ -161,16 +161,16 @@ menuseparator {
 
 /* Target window control buttons */
 /* Base button style */
-.titlebar-buttonbox > .titlebar-button {
-  background-color: transparent !important;
-  border-radius: 4px;
-  transition: background-color 0.2s ease;
-}
+/* .titlebar-buttonbox > .titlebar-button { */
+/*   background-color: transparent !important; */
+/*   border-radius: 4px; */
+/*   transition: background-color 0.2s ease; */
+/* } */
 
 /* Default hover does nothing (prevents overlap) */
-.titlebar-button:hover {
-  background: none !important;
-}
+/* .titlebar-button:hover { */
+/*   background: none !important; */
+/* } */
 
 /* Close button hover = pink */
 .titlebar-close:hover {
@@ -178,21 +178,21 @@ menuseparator {
 }
 
 /* Minimize hover = #3b4261 */
-.titlebar-min:hover {
-  background-color: #3b4261 !important;
-}
+/* .titlebar-min:hover { */
+/*   background-color: #3b4261 !important; */
+/* } */
 
 /* Maximize/Restore hover = #3b4261 */
-.titlebar-max:hover,
-.titlebar-restore:hover {
-  background-color: #3b4261 !important;
-}
+/* .titlebar-max:hover, */
+/* .titlebar-restore:hover { */
+/*   background-color: #3b4261 !important; */
+/* } */
 
 /* Right-click menu */
 menupopup {
-  --menu-background-color: #24283b !important;
-  --panel-background: #24283b !important;
-  background-color: #24283b !important;
+  --menu-background-color: #161c2b !important;
+  --panel-background: #161c2b !important;
+  background-color: #161c2b !important;
   border-radius: 6px;
 }
 
@@ -247,7 +247,7 @@ menu {
 
 /* Inner content container */
 panelview {
-  background-color: #24283b !important;
+  background-color: #161c2b !important;
 }
 
 :is(menupopup, panel):where([type="arrow"]) {
@@ -277,7 +277,7 @@ panelview {
 #BMB_bookmarksPopup menupopup[placespopup="true"],
 #bookmarksMenu menupopup[placespopup="true"] {
   --panel-border-color: transparent !important;
-  --arrowpanel-background: #24283b !important;
+  --arrowpanel-background: #161c2b !important;
   --arrowpanel-color: #a9b1d6 !important;
   box-shadow: none !important;
   border: 1px solid #545c7e !important;
