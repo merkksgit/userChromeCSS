@@ -38,13 +38,18 @@ menuseparator {
 }
 
 /* not secure button backround */
-#identity-icon-box {
-  background: none !important;
+/* #identity-icon-box { */
+/*   background: none !important; */
+/* } */
+
+#trust-icon-container.insecure {
+  background-color: transparent !important;
+  background-image: none !important;
 }
 
-#identity-icon {
-  display: none !important;
-}
+/* #identity-icon { */
+/*   display: none !important; */
+/* } */
 
 #identity-permission-box {
   background: none !important;
