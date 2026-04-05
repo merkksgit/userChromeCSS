@@ -15,6 +15,19 @@
   border-color: transparent !important;
 }
 
+/* No URL bar boarders */
+#urlbar .urlbar-background {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+#urlbar:focus-within .urlbar-background {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
 /* Remove menu separators (dividers) */
 menuseparator {
   display: none !important;
