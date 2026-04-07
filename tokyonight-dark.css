@@ -33,6 +33,47 @@ menuseparator {
   display: none !important;
 }
 
+/* Split view border */
+#tabbrowser-tabpanels {
+  &[splitview] {
+    & .browserContainer {
+      border-radius: 0px !important;
+      overflow: hidden !important;
+
+      .deck-selected > & {
+        outline: none !important;
+      }
+    }
+  }
+}
+
+/* #tabbrowser-tabpanels { */
+/*   &[splitview] { */
+/*     & .browserContainer { */
+/*       outline: 2px solid red !important; */
+/**/
+/*       .deck-selected > & { */
+/*         outline: 2px solid blue !important; */
+/*       } */
+/**/
+/*       &:first-child { */
+/*         outline: none !important; */
+/*         border: 2px solid pink !important; */
+/**/
+/*         .deck-selected > & { */
+/*           outline: none !important; */
+/*           border: 2px solid yellow !important; */
+/*         } */
+/*       } */
+/*     } */
+/*   } */
+/* } */
+
+/* Split view seperator */
+.split-view-splitter {
+  display: none !important;
+}
+
 /* Remove separators from the Application Menu (hamburger menu) */
 /*#appMenu-popup .subviewbutton-separator,
 #appMenu-popup toolbarseparator,
@@ -134,6 +175,7 @@ menuseparator {
   color: #5f6588 !important;
 }
 
+/*Extensions button*/
 #unified-extensions-button {
   display: none !important;
 }
