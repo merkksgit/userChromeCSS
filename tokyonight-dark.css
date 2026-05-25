@@ -82,9 +82,15 @@ menuseparator {
   display: none !important;
 }*/
 
-.searchmode-switcher-chicklet {
+/* .searchmode-switcher-chicklet { */
+/*   background: none !important; */
+/*   padding-left: 10px !important; */
+/* } */
+
+/* Hide searchmode-switcher button's translucent background */
+.searchmode-switcher-dropmarker,
+.button-background {
   background: none !important;
-  padding-left: 10px !important;
 }
 
 #soundfixer_unrelenting_technology-BAP {
