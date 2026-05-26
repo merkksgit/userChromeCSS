@@ -89,7 +89,7 @@ menuseparator {
 
 /* Hide searchmode-switcher button's translucent background */
 .searchmode-switcher-dropmarker,
-.button-background {
+.button-background.labelled {
   background: none !important;
 }
 
