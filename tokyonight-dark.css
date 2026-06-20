@@ -8,7 +8,7 @@
   --tab-border-radius: var(--toolbarbutton-border-radius);
   --toolbarbutton-border-radius: var(--button-border-radius);
   --button-border-radius: var(--border-radius-medium);
-  --border-radius-medium: 3px !important;
+  --border-radius-medium: 4px !important;
 }
 
 #nav-bar {
@@ -82,10 +82,10 @@ menuseparator {
   display: none !important;
 }*/
 
-/* .searchmode-switcher-chicklet { */
-/*   background: none !important; */
-/*   padding-left: 10px !important; */
-/* } */
+/*.searchmode-switcher-chicklet {
+  background: none !important;
+  padding-left: 10px !important;
+}*/
 
 /* Hide searchmode-switcher button's translucent background */
 .searchmode-switcher-dropmarker,
@@ -93,8 +93,20 @@ menuseparator {
   background: none !important;
 }
 
-#soundfixer_unrelenting_technology-BAP {
+/*hide soundfixer icon*/
+/*#soundfixer_unrelenting_technology-BAP {
   list-style-image: none !important;
+}*/
+
+/*Hide vPN-button*/
+#ipprotection-button {
+  display: none !important;
+}
+
+/*soundfixer icon color*/
+#soundfixer_unrelenting_technology-BAP .toolbarbutton-icon {
+  filter: brightness(0) saturate(100%) invert(13%) sepia(20%) saturate(800%)
+    hue-rotate(195deg) brightness(95%) !important;
 }
 
 /* not secure button backround */
