@@ -4,6 +4,132 @@
     --lwt-accent-color,
     var(--toolbox-non-lwt-bgcolor)
   ) !important;
+  /* border radius of multiple elements */
+  --tab-border-radius: var(--toolbarbutton-border-radius);
+  --toolbarbutton-border-radius: var(--button-border-radius);
+  --button-border-radius: var(--border-radius-medium);
+  --border-radius-medium: 4px !important;
+}
+
+#nav-bar {
+  border-color: transparent !important;
+}
+
+/* No URL bar boarders */
+#urlbar .urlbar-background {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+#urlbar:focus-within .urlbar-background {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Remove menu separators (dividers) */
+menuseparator {
+  display: none !important;
+}
+
+/* Split view border */
+#tabbrowser-tabpanels {
+  &[splitview] {
+    & .browserContainer {
+      border-radius: 0px !important;
+      overflow: hidden !important;
+
+      .deck-selected > & {
+        outline: none !important;
+      }
+    }
+  }
+}
+
+/* #tabbrowser-tabpanels { */
+/*   &[splitview] { */
+/*     & .browserContainer { */
+/*       outline: 2px solid red !important; */
+/**/
+/*       .deck-selected > & { */
+/*         outline: 2px solid blue !important; */
+/*       } */
+/**/
+/*       &:first-child { */
+/*         outline: none !important; */
+/*         border: 2px solid pink !important; */
+/**/
+/*         .deck-selected > & { */
+/*           outline: none !important; */
+/*           border: 2px solid yellow !important; */
+/*         } */
+/*       } */
+/*     } */
+/*   } */
+/* } */
+
+/* Split view seperator */
+.split-view-splitter {
+  display: none !important;
+}
+
+/* Remove separators from the Application Menu (hamburger menu) */
+/*#appMenu-popup .subviewbutton-separator,
+#appMenu-popup toolbarseparator,
+#appMenu-popup menuseparator,
+#appMenu-popup hr {
+  display: none !important;
+}*/
+
+/*.searchmode-switcher-chicklet {
+  background: none !important;
+  padding-left: 10px !important;
+}*/
+
+/* Hide searchmode-switcher button's translucent background */
+.searchmode-switcher-dropmarker,
+.button-background.labelled {
+  background: none !important;
+}
+
+/*hide soundfixer icon*/
+/*#soundfixer_unrelenting_technology-BAP {
+  list-style-image: none !important;
+}*/
+
+/*Hide vPN-button*/
+#ipprotection-button {
+  display: none !important;
+}
+
+/*soundfixer icon color*/
+#soundfixer_unrelenting_technology-BAP .toolbarbutton-icon {
+  filter: brightness(0) saturate(100%) invert(13%) sepia(20%) saturate(800%)
+    hue-rotate(195deg) brightness(95%) !important;
+}
+
+/* not secure button backround */
+/* #identity-icon-box { */
+/*   background: none !important; */
+/* } */
+
+#trust-icon-container.insecure {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* #identity-icon { */
+/*   display: none !important; */
+/* } */
+
+#identity-permission-box {
+  background: none !important;
+}
+
+/*Hide new tab firefox icon*/
+.tabbrowser-tab[label="New Tab"] .tab-icon-image {
+  display: none !important;
 }
 
 .tabbrowser-tab {
@@ -14,20 +140,23 @@
   text-shadow: none !important;
 }
 
+#home-button {
+  display: none !important;
+}
+
 #searchmode-switcher-icon {
   display: none !important;
 }
 
 #urlbar-searchmode-switcher {
-  background-color: #24283b !important;
+  background-color: #161c2b !important;
 }
 
 #searchmode-switcher-chicklet {
-  background-color: #24283b !important;
+  background-color: #161c2b !important;
 }
 
 /* Hide some icons from toolbar */
-
 #tracking-protection-icon {
   /*display: none !important;*/
   color: #565f89 !important;
@@ -39,7 +168,8 @@
 }
 
 #permissions-granted-icon {
-  display: none !important;
+  /*display: none !important;*/
+  color: #565f89 !important;
 }
 
 .blocked-permission-icon.autoplay-media-icon {
@@ -52,13 +182,18 @@
 }
 
 #translations-button-icon {
-  display: none !important;
+  color: #1f2335 !important;
 }
 
 #star-button {
-  display: none !important;
+  color: #1f2335 !important;
 }
 
+#downloads-button {
+  color: #5f6588 !important;
+}
+
+/*Extensions button*/
 #unified-extensions-button {
   display: none !important;
 }
@@ -68,16 +203,23 @@
   color: #565f89 !important;
 }
 
+.urlbar-icon {
+  color: #565f89 !important;
+}
+
+#firefox-view-button {
+  color: #565f89 !important;
+}
+
 /* Current tab color */
-.tabbrowser-tab[selected="true"] .tab-label {
-  /*color: #bb9af7 !important;*/
+.tabbrowser-tab[selected] .tab-label {
   color: #c0caf5 !important;
   font-weight: bold;
 }
-
 /* Non-selected tab color */
-.tabbrowser-tab:not([selected="true"]) .tab-label {
-  color: #737aa2 !important; /* Different color for inactive tabs */
+.tabbrowser-tab:not([selected]) .tab-label {
+  color: #737aa2 !important;
+  font-weight: bold;
 }
 
 /* Tab-close-button color */
@@ -93,69 +235,42 @@
   color: #5f6588;
 }
 
-/* Round minimise, maximise and close buttons */
-.titlebar-button {
-  --uc-caption-background: var(--uc-caption-color);
+/* Target window control buttons */
+/* Base button style */
+/* .titlebar-buttonbox > .titlebar-button { */
+/*   background-color: transparent !important; */
+/*   border-radius: 4px; */
+/*   transition: background-color 0.2s ease; */
+/* } */
+
+/* Default hover does nothing (prevents overlap) */
+/* .titlebar-button:hover { */
+/*   background: none !important; */
+/* } */
+
+/* Close button hover = pink */
+.titlebar-close:hover {
+  background-color: #ff007c !important;
 }
 
-.titlebar-button {
-  opacity: 1;
-  --uc-caption-color: #c3e88d !important;
-}
+/* Minimize hover = #3b4261 */
+/* .titlebar-min:hover { */
+/*   background-color: #3b4261 !important; */
+/* } */
 
-.titlebar-min {
-  opacity: 1;
-  --uc-caption-color: #ffc777 !important;
-}
-.titlebar-close {
-  opacity: 1;
-  --uc-caption-color: #ff757f !important;
-}
-
-.titlebar-button:hover {
-  opacity: 0.6;
-}
-
-.titlebar-button {
-  background: transparent !important;
-  padding-inline: 10px !important;
-  transition: opacity 0.2s ease;
-}
-
-.titlebar-close {
-  padding-right: 18px !important;
-}
-
-.titlebar-button > .toolbarbutton-icon {
-  list-style-image: none;
-  background: var(--uc-caption-background, currentColor) !important;
-  width: 16px !important; /* Add this to set specific width */
-  height: 16px !important; /* Add this to set specific height */
-  border-radius: 16px; /* Adjust this to match the width/height */
-}
-
-/* Set specific margins for individual buttons if needed */
-.titlebar-min {
-  margin-inline: -10px !important;
-}
-
-.titlebar-max {
-  margin-inline: -10px !important;
-}
-
-.titlebar-close {
-  margin-inline-start: -10px !important; /* Space from the left */
-  margin-inline-end: -5px !important; /* Space from the right edge */
-}
+/* Maximize/Restore hover = #3b4261 */
+/* .titlebar-max:hover, */
+/* .titlebar-restore:hover { */
+/*   background-color: #3b4261 !important; */
+/* } */
 
 /* Right-click menu */
-/* menupopup { */
-/*   --menu-background-color: #24283b !important; */
-/**/
-/*   --panel-background: #24283b !important; */
-/*   background-color: #24283b !important; */
-/*   border-radius: 6px; */
-/* } */
+menupopup {
+  --menu-background: #161c2b !important;
+  --panel-background: #161c2b !important;
+  background-color: #161c2b !important;
+  border-radius: 6px;
+}
 
 /* For menu items when hovered */
 menuitem:hover,
@@ -169,17 +284,6 @@ menu {
   color: #a9b1d6 !important;
 }
 
-/* For disabled menu items */
-/* menuitem[disabled="true"] { */
-/*   color: #565f89 !important; */
-/* } */
-
-/* Main menu panel background */
-/* #appMenu-popup { */
-/*   background-color: #24283b !important; */
-/*   border-radius: 6px; */
-/* } */
-
 /* Menu items */
 .subviewbutton {
   color: #a9b1d6 !important;
@@ -192,9 +296,9 @@ menu {
 }
 
 /* Separator lines */
-toolbarseparator {
+/*toolbarseparator {
   border-bottom: 1px solid #565f89 !important;
-}
+}*/
 
 /* Icons in the menu */
 .subviewbutton .toolbarbutton-icon {
@@ -219,7 +323,7 @@ toolbarseparator {
 
 /* Inner content container */
 panelview {
-  background-color: #24283b !important;
+  background-color: #161c2b !important;
 }
 
 :is(menupopup, panel):where([type="arrow"]) {
@@ -228,6 +332,12 @@ panelview {
 
 :is(menupopup, panel):where([type="arrow"]) {
   --panel-border-color: #545c7e !important;
+}
+
+#PlacesToolbar menupopup menuitem,
+#PlacesToolbar menupopup menu {
+  padding: 4px 8px !important;
+  margin: 0 !important;
 }
 
 #urlbar[breakout][breakout-extend] > #urlbar-background {
@@ -236,4 +346,48 @@ panelview {
 
 #urlbar-results .urlbarView-row[selected] {
   background-color: #3b4261 !important;
+}
+
+/* Target only bookmarks dropdown menus with the correct selector */
+#PlacesToolbar menupopup[placespopup="true"],
+#BMB_bookmarksPopup menupopup[placespopup="true"],
+#bookmarksMenu menupopup[placespopup="true"] {
+  --panel-border-color: transparent !important;
+  --arrowpanel-background: #161c2b !important;
+  --arrowpanel-color: #a9b1d6 !important;
+  box-shadow: none !important;
+  border: 1px solid #545c7e !important;
+  border-radius: 8px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Remove the inner border/outline */
+#PlacesToolbar menupopup[placespopup="true"] .popup-internal-box,
+#BMB_bookmarksPopup menupopup[placespopup="true"] .popup-internal-box,
+#bookmarksMenu menupopup[placespopup="true"] .popup-internal-box {
+  border: none !important;
+  outline: none !important;
+}
+
+/* Fix the spacing within bookmark menu items */
+#PlacesToolbar menupopup[placespopup="true"] menuitem,
+#PlacesToolbar menupopup[placespopup="true"] menu,
+#BMB_bookmarksPopup menupopup[placespopup="true"] menuitem,
+#BMB_bookmarksPopup menupopup[placespopup="true"] menu,
+#bookmarksMenu menupopup[placespopup="true"] menuitem,
+#bookmarksMenu menupopup[placespopup="true"] menu {
+  padding: 4px 8px !important;
+  margin: 0 !important;
+  color: #a9b1d6 !important;
+}
+
+/* Hover state for bookmark items */
+#PlacesToolbar menupopup[placespopup="true"] menuitem:hover,
+#PlacesToolbar menupopup[placespopup="true"] menu:hover,
+#BMB_bookmarksPopup menupopup[placespopup="true"] menuitem:hover,
+#BMB_bookmarksPopup menupopup[placespopup="true"] menu:hover,
+#bookmarksMenu menupopup[placespopup="true"] menuitem:hover,
+#bookmarksMenu menupopup[placespopup="true"] menu:hover {
+  background-color: #2f3549 !important;
 }
