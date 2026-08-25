@@ -1,3 +1,4 @@
+// user.js located at: /home/merkks/.config/mozilla/firefox/6g6e0ekz.default-release/user.js
 // Override Firefox's own render scale, independent of system/monitor scale.
 // -1 = auto (follows Hyprland's monitor scale). 1 = OS pixel grid 1:1.
 //
