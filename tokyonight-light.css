@@ -226,14 +226,14 @@ menuseparator {
 }
 
 /* Current tab color */
-.tabbrowser-tab[selected="true"] .tab-label {
+.tabbrowser-tab[selected] .tab-label {
   /*color: #bb9af7 !important;*/
   color: #c0caf5 !important;
   font-weight: bold;
 }
 
 /* Non-selected tab color */
-.tabbrowser-tab:not([selected="true"]) .tab-label {
+.tabbrowser-tab:not([selected]) .tab-label {
   color: #737aa2 !important; /* Different color for inactive tabs */
   font-weight: bold;
 }
