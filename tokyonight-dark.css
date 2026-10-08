@@ -1,3 +1,20 @@
+/* ==========================================================================
+   Tokyo Night palette (used by the sidebar section at the end of this file)
+   ========================================================================== */
+:root {
+  --tn-bg: #161c2b; /* toolbar / frame */
+  --tn-popup-bg: #161b2c; /* theme "popup" color */
+  --tn-text: #a9b1d6; /* primary menu text */
+  --tn-text-bright: #c0caf5; /* hovered / selected text */
+  --tn-text-dim: #565f89; /* disabled, accel keys */
+  --tn-hover: #2f3549; /* menu item highlight */
+  --tn-selected: #3b4261; /* stronger selection */
+  --tn-border: #545c7e; /* popup borders */
+  --tn-separator: #292e42;
+  --tn-accent: #7aa2f7; /* focus rings, selection accent */
+  --tn-accent-hover: #6a92e7;
+}
+
 /* Hide separator */
 :root {
   --chrome-content-separator-color: var(
@@ -5,10 +22,25 @@
     var(--toolbox-non-lwt-bgcolor)
   ) !important;
   /* border radius of multiple elements */
-  --tab-border-radius: var(--toolbarbutton-border-radius);
-  --toolbarbutton-border-radius: var(--button-border-radius);
-  --button-border-radius: var(--border-radius-medium);
+  /* Every link needs !important: Nova (browser.nova.enabled, on by default)
+     redefines these tokens on :root with larger values, and a non-important
+     userChrome declaration loses to Firefox's own. */
+  --tab-border-radius: var(--toolbarbutton-border-radius) !important;
+  --toolbarbutton-border-radius: var(--button-border-radius) !important;
+  --button-border-radius: var(--border-radius-medium) !important;
   --border-radius-medium: 4px !important;
+  /* Revert the rest of Nova's rounder tokens to their pre-Nova values */
+  --border-radius-xsmall: 2px !important;
+  --border-radius-small: 4px !important;
+  --urlbar-border-radius: var(--button-border-radius) !important;
+  --popup-border-radius: 8px !important;
+  --panel-border-radius: var(--popup-border-radius) !important;
+  --panel-menuitem-border-radius: var(--border-radius-small) !important;
+}
+
+/* Tab hover preview sets its own radius (border-radius-large under Nova) */
+#tab-preview-panel {
+  --panel-border-radius: var(--popup-border-radius) !important;
 }
 
 #nav-bar {
@@ -392,4 +424,130 @@ panelview {
 #bookmarksMenu menupopup[placespopup="true"] menuitem:hover,
 #bookmarksMenu menupopup[placespopup="true"] menu:hover {
   background-color: #2f3549 !important;
+}
+
+/* ==========================================================================
+   Sidebar (Ctrl+B / Ctrl+H) — sidebar.revamp = true
+   Your theme manifest doesn't define the `sidebar` / `sidebar_text` keys, so
+   --sidebar-background-color and --sidebar-text-color resolve to null and the
+   panel falls back to the in-content dark defaults (near-black + cyan accent).
+   Defining them here is the fix.
+   ========================================================================== */
+
+/* Outer chrome: #sidebar-box, the #sidebar browser background, header border.
+   Also seeds --sidebar-text-color inside the panel document, whose own
+   :root does `color: var(--sidebar-text-color)`. */
+:root {
+  --sidebar-background-color: var(--tn-bg) !important;
+  --sidebar-text-color: var(--tn-text) !important;
+  /* Subtle: this also paints #sidebar's `outline: 0.5px solid` edge and
+     #sidebar-container's hairline border. --tn-border is too bright there. */
+  --sidebar-border-color: var(--tn-separator) !important;
+}
+
+#sidebar-box,
+#sidebar-header {
+  background-color: var(--tn-bg) !important;
+  color: var(--tn-text) !important;
+}
+
+#sidebar-header {
+  border-bottom-color: var(--tn-separator) !important;
+}
+
+/* Splitters: under sidebar.revamp these use `border-inline: <n> solid
+   transparent` + `background-clip: padding-box` purely to widen the drag
+   hit-area. Colouring that border draws a visible line — so keep it
+   transparent and only tint the hover state. */
+#sidebar-splitter,
+#sidebar-launcher-splitter,
+.sidebar-splitter {
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+
+#sidebar-splitter:hover,
+#sidebar-launcher-splitter:hover,
+.sidebar-splitter:hover {
+  background-color: var(--tn-accent) !important;
+}
+
+/* Sidebar launcher (the icon strip) */
+#sidebar-main {
+  background-color: var(--tn-bg) !important;
+  color: var(--tn-text) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Inside the panel document (chrome://browser/content/sidebar/*.html).
+   Its UI is Lit custom elements rendering into shadow DOM, so their internals
+   can't be selected from here — but custom properties inherit through shadow
+   boundaries, so retinting the design tokens on :root reaches everything.
+   The :has() scopes this to panel documents so the rest of the browser chrome
+   keeps its own accent color.
+   -------------------------------------------------------------------------- */
+:root:has(
+  > body
+    > :is(
+      sidebar-bookmarks,
+      sidebar-history,
+      sidebar-syncedtabs,
+      sidebar-opentabs,
+      sidebar-customize
+    )
+) {
+  color-scheme: dark !important;
+
+  /* Surfaces */
+  --background-color-canvas: var(--tn-bg) !important;
+  --background-color-box: var(--tn-popup-bg) !important;
+  --card-background-color: var(--tn-popup-bg) !important;
+  --sidebar-box-background: var(--tn-popup-bg) !important;
+  --sidebar-box-border-color: var(--tn-border) !important;
+  --sidebar-box-color: var(--tn-text) !important;
+
+  /* Text */
+  --text-color: var(--tn-text) !important;
+  --text-color-deemphasized: var(--tn-text-dim) !important;
+
+  /* Borders */
+  --border-color: var(--tn-border) !important;
+  --border-color-deemphasized: var(--tn-separator) !important;
+  --border-color-interactive: var(--tn-border) !important;
+
+  /* Focus ring. moz-input-text has no outline token of its own — it inherits
+     the shared --focus-outline, so this is the only lever, and it reaches the
+     close button and list rows too. Grey keeps keyboard focus legible without
+     the loud blue ring around the search field. */
+  --focus-outline-color: var(--tn-border) !important;
+  --focus-outline-offset: 1px !important;
+
+  /* Accent — selected rows, links. Focus ring is handled above and
+     deliberately NOT set from these. */
+  --color-accent-primary: var(--tn-accent) !important;
+  --color-accent-primary-hover: var(--tn-accent-hover) !important;
+  --color-accent-primary-active: var(--tn-accent-hover) !important;
+  --color-accent-primary-selected: var(--tn-accent) !important;
+  --text-color-accent-primary-selected: var(--tn-bg) !important;
+
+  /* Row hover / active (bookmark + history lists, toolbar buttons) */
+  --button-background-color: color-mix(
+    in srgb,
+    var(--tn-hover) 60%,
+    transparent
+  ) !important;
+  --button-background-color-hover: var(--tn-hover) !important;
+  --button-background-color-active: var(--tn-selected) !important;
+  --button-background-color-ghost-hover: var(--tn-hover) !important;
+  --button-background-color-ghost-active: var(--tn-selected) !important;
+  --button-text-color-ghost-hover: var(--tn-text-bright) !important;
+  --button-text-color-ghost-active: var(--tn-text-bright) !important;
+
+  /* Search input */
+  --input-background-color: var(--tn-popup-bg) !important;
+  --input-border-color: var(--tn-border) !important;
+
+  /* Selected list rows */
+  --lwt-sidebar-highlight-background-color: var(--tn-selected) !important;
+  --lwt-sidebar-highlight-text-color: var(--tn-text-bright) !important;
 }
