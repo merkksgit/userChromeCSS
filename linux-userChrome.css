@@ -60,6 +60,7 @@ menuseparator {
 
       .deck-selected > & {
         outline: none !important;
+        border-color: var(--chrome-content-separator-color) !important;
       }
     }
   }
